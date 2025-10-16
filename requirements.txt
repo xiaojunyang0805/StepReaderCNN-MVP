@@ -1,31 +1,17 @@
-# Core dependencies for StepReaderCNN
-# This file is used by Streamlit Cloud for deployment
-
-# Deep Learning (use latest compatible versions)
 torch
 torchvision
-
-# Data Processing
 numpy
 pandas
 scipy
 h5py
-
-# Visualization
 matplotlib
 seaborn
 plotly
-
-# GUI & API
 streamlit
 fastapi
 uvicorn
-
-# ML Utilities
 scikit-learn
 tensorboard
 tqdm
-
-# Configuration
 pyyaml
 python-dotenv
