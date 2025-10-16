@@ -205,24 +205,6 @@ python tests/test_synthetic.py
 
 ---
 
-## Development Timeline
-
-All 9 phases completed in ~5 hours (Oct 15-16, 2025):
-
-| Phase | Status | Duration |
-|-------|--------|----------|
-| Setup & Data Exploration | ✓ | 30 min |
-| GUI for Data Exploration | ✓ | 28 min |
-| Data Preprocessing Pipeline | ✓ | 20 min |
-| CNN Model Development | ✓ | 20 min |
-| Training GUI & Monitoring | ✓ | 10 min |
-| Model Training with Real Data | ✓ | 23 min |
-| Evaluation & Prediction Interface | ✓ | 22 min |
-| Synthetic Data Generation | ✓ | 45 min |
-| Testing & Final Integration | ✓ | 2 hours |
-
----
-
 ## Key Technologies
 
 - PyTorch 2.9.0, Streamlit 1.50.0, FastAPI 0.119.0
@@ -253,6 +235,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 If you use this framework in your research, please cite:
 
 **This Work**:
+
+> Yang, X. (2025). *StepReaderCNN: CNN-based Framework for Electrochemical Sensor Signal Processing* (Version 1.0) [Software]. https://github.com/xiaojunyang0805/StepReaderCNN-MVP
+
+<details>
+<summary>BibTeX format (click to expand)</summary>
+
 ```bibtex
 @software{stepreader_cnn_2025,
   title = {StepReaderCNN: CNN-based Framework for Electrochemical Sensor Signal Processing},
@@ -263,10 +251,16 @@ If you use this framework in your research, please cite:
   url = {https://github.com/xiaojunyang0805/StepReaderCNN-MVP}
 }
 ```
+</details>
 
 **Inspiring Work**:
 
 This project was inspired by the following publication:
+
+> Zhao, Z., Naha, A., Kostopoulos, N., & Sekretareva, A. (2024). Advanced Algorithm for Step Detection in Single-Entity Electrochemistry: A Comparative Study of Wavelet Transforms and Convolutional Neural Networks. *Faraday Discussions*. https://doi.org/10.1039/D4FD00130C
+
+<details>
+<summary>BibTeX format (click to expand)</summary>
 
 ```bibtex
 @article{zhao2024advanced,
@@ -278,6 +272,7 @@ This project was inspired by the following publication:
   publisher = {Royal Society of Chemistry}
 }
 ```
+</details>
 
 ---
 
@@ -293,6 +288,16 @@ For questions, bug reports, or feature requests, please open an issue on GitHub.
 
 ## Acknowledgments
 
-This project implements single-entity electrochemistry collision signal analysis using deep learning techniques for automated particle size classification. The methodology builds upon advanced algorithms for step detection in single-entity electrochemistry, combining discrete wavelet transforms and convolutional neural networks for robust signal processing.
+This project implements single-entity electrochemistry collision signal analysis using deep learning techniques for automated particle size classification.
+
+**Inspiration**: This work was inspired by and builds upon the research presented in:
+
+> Zhao, Z., Naha, A., Kostopoulos, N., & Sekretareva, A. (2024). "Advanced Algorithm for Step Detection in Single-Entity Electrochemistry: A Comparative Study of Wavelet Transforms and Convolutional Neural Networks." *Faraday Discussions*. DOI: [10.1039/D4FD00130C](https://doi.org/10.1039/D4FD00130C)
+
+The methodology combines discrete wavelet transforms (DWT) and convolutional neural networks (CNN) for robust signal processing, extending the concepts of step detection to automated particle size classification with synthetic data generation capabilities.
+
+We gratefully acknowledge the authors for their pioneering work in applying machine learning techniques to single-entity electrochemistry signal analysis.
+
+**Special Thanks**: We thank Professor Serge Lemay for valuable discussions that contributed to the development of this work.
 
 **Status**: ✓ Production Ready - Fully tested, documented, and deployed
