@@ -1,0 +1,198 @@
+# StepReaderCNN Configuration File
+
+# Project Settings
+project:
+  name: "StepReaderCNN"
+  version: "0.1.0"
+  description: "CNN-based electrochemical sensor signal processing"
+
+# Data Settings
+data:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  synthetic_data_dir: "data/synthetic"
+  test_data_dir: "TestData"
+  
+  # Data preprocessing
+  preprocessing:
+    normalization: "zscore"  # Options: zscore, minmax, robust, none
+    sequence_length: 10000  # Target sequence length (will be determined from EDA)
+    padding: "zeros"  # Options: zeros, edge, mean
+    truncation: "end"  # Options: start, end, center
+    
+  # Train/Val/Test split
+  split:
+    train_ratio: 0.7
+    val_ratio: 0.15
+    test_ratio: 0.15
+    random_seed: 42
+    stratify: true
+
+  # Data augmentation
+  augmentation:
+    enabled: true
+    techniques:
+      - time_warp: true
+      - magnitude_scale: true
+      - gaussian_noise: true
+      - time_shift: true
+    augmentation_factor: 2  # How many augmented samples per original
+
+# Model Settings
+model:
+  architecture: "SimpleCNN1D"  # Options: SimpleCNN1D, ResNet1D, MultiScaleCNN1D
+  num_classes: 3  # PS 1um, 2um, 3um
+  
+  # Model hyperparameters
+  SimpleCNN1D:
+    input_channels: 1
+    hidden_channels: [32, 64, 128, 256]
+    kernel_sizes: [7, 5, 5, 3]
+    dropout: 0.3
+    
+  ResNet1D:
+    input_channels: 1
+    base_channels: 32
+    num_blocks: [2, 2, 2, 2]
+    dropout: 0.3
+    
+  MultiScaleCNN1D:
+    input_channels: 1
+    base_channels: 32
+    kernel_sizes: [3, 7, 15]
+    dropout: 0.3
+
+# Training Settings
+training:
+  # Optimizer
+  optimizer: "Adam"  # Options: Adam, SGD, AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9  # For SGD
+  
+  # Scheduler
+  scheduler: "ReduceLROnPlateau"  # Options: ReduceLROnPlateau, CosineAnnealing, StepLR, none
+  scheduler_params:
+    factor: 0.5
+    patience: 10
+    min_lr: 0.00001
+  
+  # Training parameters
+  epochs: 100
+  batch_size: 32
+  num_workers: 4
+  pin_memory: true
+  
+  # Early stopping
+  early_stopping:
+    enabled: true
+    patience: 20
+    min_delta: 0.001
+  
+  # Checkpointing
+  checkpoint:
+    save_best: true
+    save_last: true
+    save_every_n_epochs: 10
+    monitor: "val_loss"  # Options: val_loss, val_accuracy
+    mode: "min"  # Options: min, max
+  
+  # Mixed precision training
+  mixed_precision: false
+  
+  # Gradient clipping
+  gradient_clip: 1.0
+
+# Evaluation Settings
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+    - confusion_matrix
+  
+  # Confidence threshold for predictions
+  confidence_threshold: 0.5
+
+# Synthetic Data Generation
+synthetic:
+  enabled: true
+  num_samples_per_class: 50
+  generation_method: "parametric"  # Options: parametric, statistical, gan
+  
+  # Parametric model parameters
+  parametric:
+    noise_level: 0.05
+    baseline_variation: 0.1
+    signal_variation: 0.15
+
+# Paths
+paths:
+  models_dir: "models"
+  outputs_dir: "outputs"
+  plots_dir: "outputs/plots"
+  reports_dir: "outputs/reports"
+  logs_dir: "outputs/logs"
+  tensorboard_dir: "outputs/tensorboard"
+
+# GUI Settings
+gui:
+  title: "StepReaderCNN - Sensor Signal Analysis"
+  theme: "light"  # Options: light, dark
+  port: 8501
+  max_upload_size: 500  # MB
+  
+  # Plotting settings
+  plot:
+    max_signals_to_plot: 100  # For performance
+    default_plot_height: 400
+    default_plot_width: 800
+
+# API Settings
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+  cors_origins: ["*"]
+  
+  # WebSocket settings
+  websocket:
+    ping_interval: 30
+    ping_timeout: 10
+
+# Database Settings
+database:
+  type: "sqlite"  # Options: sqlite, postgresql
+  sqlite:
+    path: "data/stepreader.db"
+  postgresql:
+    host: "localhost"
+    port: 5432
+    database: "stepreader"
+    user: "postgres"
+    password: ""
+
+# Logging
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "outputs/logs/app.log"
+  console: true
+
+# Experiment Tracking
+experiment:
+  name: null  # Auto-generated if null
+  tags: []
+  notes: ""
+  use_tensorboard: true
+  use_wandb: false  # Set to true if using W&B
+  
+# Hardware Settings
+hardware:
+  device: "auto"  # Options: auto, cpu, cuda, mps
+  cuda_device_id: 0
+  num_gpus: 1
+
+# Random Seeds (for reproducibility)
+random_seed: 42

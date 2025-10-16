@@ -1,0 +1,95 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+
+# Data
+data/raw/*
+data/processed/*
+data/synthetic/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/synthetic/.gitkeep
+*.csv
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# Models
+models/*.pth
+models/*.pt
+models/*.onnx
+models/*.pkl
+!models/.gitkeep
+
+# Outputs
+outputs/logs/*
+outputs/plots/*
+outputs/reports/*
+outputs/tensorboard/*
+!outputs/logs/.gitkeep
+!outputs/plots/.gitkeep
+!outputs/reports/.gitkeep
+!outputs/tensorboard/.gitkeep
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Misc
+*.log
+.cache/
+temp/
+tmp/
