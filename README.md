@@ -13,8 +13,8 @@ A production-ready deep learning framework for analyzing single-entity electroch
 git clone <repository-url>
 cd StepReaderCNN
 
-# 2. Install dependencies
-pip install -r requirements.txt
+# 2. Install dependencies (see Requirements section below)
+pip install torch torchvision streamlit pandas numpy scipy matplotlib seaborn plotly scikit-learn fastapi uvicorn pyyaml python-dotenv h5py tensorboard tqdm
 
 # 3. Launch GUI
 streamlit run app.py
@@ -68,7 +68,10 @@ streamlit run app.py
 **Development** (optional)
 - pytest 7.4.0+, black 23.10.0+, flake8 6.1.0+
 
-See `requirements.txt` for complete list.
+Install all dependencies:
+```bash
+pip install torch torchvision streamlit pandas numpy scipy matplotlib seaborn plotly scikit-learn fastapi uvicorn pyyaml python-dotenv h5py tensorboard tqdm
+```
 </details>
 
 ---
@@ -78,7 +81,6 @@ See `requirements.txt` for complete list.
 ```
 StepReaderCNN/
 ├── app.py                    # Main Streamlit GUI
-├── requirements.txt          # Python dependencies
 │
 ├── src/                      # Source code
 │   ├── data/                 # Data processing (6 modules)
@@ -230,35 +232,67 @@ All 9 phases completed in ~5 hours (Oct 15-16, 2025):
 
 ---
 
+## License
+
+**MIT License - Academic Research Use**
+
+This project is licensed under the MIT License and is intended for academic research purposes. The software is fully open-source and free to use, modify, and distribute.
+
+Copyright (c) 2025 StepReaderCNN Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
 ## Citation
 
-If you use this framework in your research:
+If you use this framework in your research, please cite:
 
+**This Work**:
 ```bibtex
 @software{stepreader_cnn_2025,
   title = {StepReaderCNN: CNN-based Framework for Electrochemical Sensor Signal Processing},
+  author = {Yang, Xiaojun},
   version = {1.0},
   year = {2025},
-  month = {October}
+  month = {October},
+  url = {https://github.com/xiaojunyang0805/StepReaderCNN-MVP}
+}
+```
+
+**Inspiring Work**:
+
+This project was inspired by the following publication:
+
+```bibtex
+@article{zhao2024advanced,
+  title = {Advanced Algorithm for Step Detection in Single-Entity Electrochemistry: A Comparative Study of Wavelet Transforms and Convolutional Neural Networks},
+  author = {Zhao, Ziwen and Naha, Arunava and Kostopoulos, Nikolaos and Sekretareva, Alina},
+  journal = {Faraday Discussions},
+  year = {2024},
+  doi = {10.1039/D4FD00130C},
+  publisher = {Royal Society of Chemistry}
 }
 ```
 
 ---
 
-## License
-
-[Add your license here]
-
----
-
 ## Contact
 
-[Add your contact information here]
+**Developer**: Xiaojun Yang
+**Email**: xiaojunyang0805@gmail.com
+**Repository**: https://github.com/xiaojunyang0805/StepReaderCNN-MVP
+
+For questions, bug reports, or feature requests, please open an issue on GitHub.
 
 ---
 
 ## Acknowledgments
 
-This project implements single-entity electrochemistry collision signal analysis using deep learning techniques for automated particle size classification.
+This project implements single-entity electrochemistry collision signal analysis using deep learning techniques for automated particle size classification. The methodology builds upon advanced algorithms for step detection in single-entity electrochemistry, combining discrete wavelet transforms and convolutional neural networks for robust signal processing.
 
 **Status**: ✓ Production Ready - Fully tested, documented, and deployed
