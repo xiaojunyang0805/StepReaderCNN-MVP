@@ -8,19 +8,49 @@ A production-ready deep learning framework for analyzing single-entity electroch
 
 ## Quick Start
 
-```bash
-# 1. Clone and navigate
-git clone <repository-url>
-cd StepReaderCNN
+### For Users with Git
 
-# 2. Install dependencies (see Requirements section below)
+```bash
+# 1. Clone the repository
+git clone https://github.com/xiaojunyang0805/StepReaderCNN-MVP.git
+cd StepReaderCNN-MVP
+
+# 2. Install dependencies
 pip install torch torchvision streamlit pandas numpy scipy matplotlib seaborn plotly scikit-learn fastapi uvicorn pyyaml python-dotenv h5py tensorboard tqdm
 
 # 3. Launch GUI
 streamlit run app.py
 ```
 
-**Access**: http://localhost:8501
+### For Users without Git
+
+1. **Download the project**:
+   - Go to https://github.com/xiaojunyang0805/StepReaderCNN-MVP
+   - Click the green **"Code"** button
+   - Select **"Download ZIP"**
+   - Extract the ZIP file to your preferred location
+
+2. **Open terminal/command prompt** and navigate to the extracted folder:
+   ```bash
+   cd path/to/StepReaderCNN-MVP
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install torch torchvision streamlit pandas numpy scipy matplotlib seaborn plotly scikit-learn fastapi uvicorn pyyaml python-dotenv h5py tensorboard tqdm
+   ```
+
+4. **Launch the GUI**:
+   ```bash
+   streamlit run app.py
+   ```
+
+5. **Access the application**:
+   - Open your web browser
+   - Go to http://localhost:8501
+   - The GUI will load with all features available
+
+**Note**: The `TestData/` folder with 42 CSV files is included in the repository, so users can immediately explore the dataset after launching the application.
 
 ---
 
