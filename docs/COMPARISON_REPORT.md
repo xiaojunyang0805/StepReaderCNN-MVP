@@ -831,30 +831,16 @@ Researchers can use the **reference paper** to understand algorithms, then use *
 ## 14. Citations and References
 
 ### Reference Paper
-```bibtex
-@article{zhao2024advanced,
-  title = {Advanced Algorithm for Step Detection in Single-Entity Electrochemistry:
-           A Comparative Study of Wavelet Transforms and Convolutional Neural Networks},
-  author = {Zhao, Ziwen and Naha, Arunava and Kostopoulos, Nikolaos and Sekretareva, Alina},
-  journal = {Faraday Discussions},
-  year = {2024},
-  doi = {10.1039/D4FD00130C},
-  publisher = {Royal Society of Chemistry}
-}
-```
+
+Zhao, Z., Naha, A., Kostopoulos, N., & Sekretareva, A. (2024). Advanced Algorithm for Step Detection in Single-Entity Electrochemistry: A Comparative Study of Wavelet Transforms and Convolutional Neural Networks. *Faraday Discussions*, Royal Society of Chemistry. https://doi.org/10.1039/D4FD00130C
+
+**Repository**: https://github.com/ziwzh166/SEE_StepAnalysis
 
 ### StepReaderCNN
-```bibtex
-@software{stepreader_cnn_2025,
-  title = {StepReaderCNN: CNN-based Framework for Electrochemical Sensor Signal Processing},
-  author = {Yang, Xiaojun},
-  version = {1.0},
-  year = {2025},
-  month = {October},
-  url = {https://github.com/xiaojunyang0805/StepReaderCNN-MVP},
-  note = {Live demo: https://stepreadercnn.streamlit.app}
-}
-```
+
+Yang, X. (2025). StepReaderCNN: CNN-based Framework for Electrochemical Sensor Signal Processing (Version 1.0). GitHub repository. https://github.com/xiaojunyang0805/StepReaderCNN-MVP
+
+**Live Demo**: https://stepreadercnn.streamlit.app
 
 ---
 
