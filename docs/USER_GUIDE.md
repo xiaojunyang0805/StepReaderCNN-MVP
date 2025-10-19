@@ -1,7 +1,7 @@
 # StepReaderCNN - User Guide
 
 **Version**: 1.0
-**Last Updated**: October 16, 2025
+**Last Updated**: October 19, 2025
 
 A comprehensive CNN-based framework for electrochemical sensor signal processing with interactive GUI.
 
@@ -21,11 +21,22 @@ A comprehensive CNN-based framework for electrochemical sensor signal processing
 
 ## Getting Started
 
-### Installation
+### 🌐 Online Access (No Installation Required)
+
+**Try it now**: https://stepreadercnn.streamlit.app
+
+The application is fully deployed on Streamlit Cloud with:
+- All features accessible immediately
+- Pre-loaded with 42 TestData samples
+- No installation or setup required
+- Works on any device with a web browser
+
+### 💻 Local Installation
 
 1. **Clone the repository** (or extract files):
    ```bash
-   cd StepReaderCNN
+   git clone https://github.com/xiaojunyang0805/StepReaderCNN-MVP.git
+   cd StepReaderCNN-MVP
    ```
 
 2. **Install dependencies**:

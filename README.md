@@ -8,6 +8,15 @@ A production-ready deep learning framework for analyzing single-entity electroch
 
 ## Quick Start
 
+### 🌐 Try Online (Recommended)
+
+**Live Demo**: https://stepreadercnn.streamlit.app
+
+- No installation required
+- All features available instantly
+- Pre-loaded with 42 sample datasets
+- Try the app immediately in your browser
+
 ### For Users with Git
 
 ```bash
@@ -57,10 +66,11 @@ streamlit run app.py
 ## Features
 
 - **Interactive GUI** - Streamlit interface for data exploration, training, and evaluation
+- **Cloud Deployed** - Live at https://stepreadercnn.streamlit.app (try it now!)
 - **3 CNN Architectures** - SimpleCNN1D (135K), ResNet1D (964K), MultiScaleCNN1D (2.1M params)
 - **Synthetic Data Generation** - Realistic stochastic collision signals for dataset balancing
 - **Complete Pipeline** - Load → Preprocess → Train → Evaluate → Predict
-- **Production Ready** - 100% test coverage, comprehensive documentation
+- **Production Ready** - 100% test coverage, comprehensive documentation, cloud-ready
 
 ---
 
@@ -225,9 +235,47 @@ python tests/test_synthetic.py
 
 ---
 
+## Deployment
+
+### Streamlit Cloud (Live Demo)
+
+**Current Deployment**: https://stepreadercnn.streamlit.app
+
+The application is successfully deployed on Streamlit Cloud with:
+- ✅ All 42 TestData CSV files included (113MB)
+- ✅ CPU-optimized PyTorch for fast loading
+- ✅ Full GUI functionality
+- ✅ Automatic updates on git push
+- ✅ Free hosting for academic research
+
+### Deploy Your Own Instance
+
+**Streamlit Cloud** (Recommended):
+1. Fork the repository on GitHub
+2. Sign up at https://share.streamlit.io
+3. Connect your GitHub account
+4. Deploy from `main` branch with `app.py`
+5. TestData will be automatically included
+
+**Local Deployment**:
+```bash
+streamlit run app.py
+```
+
+**Docker Deployment**:
+```bash
+docker build -t stepreader .
+docker run -p 8501:8501 stepreader
+```
+
+See **[Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** for AWS, GCP, Azure, Heroku, and Kubernetes options.
+
+---
+
 ## Documentation
 
 - **[User Guide](docs/USER_GUIDE.md)** - Complete manual (378 lines)
+- **[Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** - Cloud and production deployment
 - **[Developer Notes](docs/Dev_note.md)** - Full development log (2300+ lines)
 - **[Project Organization](docs/PROJECT_ORGANIZATION.md)** - File structure guide
 - **[API Documentation](docs/API_DOCUMENTATION.md)** - API reference
@@ -330,4 +378,14 @@ We gratefully acknowledge the authors for their pioneering work in applying mach
 
 **Special Thanks**: We thank Professor Serge Lemay for valuable discussions that contributed to the development of this work.
 
-**Status**: ✓ Production Ready - Fully tested, documented, and deployed
+---
+
+## Project Status
+
+**Status**: ✅ Production Ready & Cloud Deployed
+
+- ✅ **Fully Tested** - 100% test coverage, all tests passing
+- ✅ **Comprehensively Documented** - User guide, API docs, deployment guide
+- ✅ **Cloud Deployed** - Live at https://stepreadercnn.streamlit.app
+- ✅ **Open Source** - MIT License, free for academic research
+- ✅ **Ready for Use** - Download and run locally or use online

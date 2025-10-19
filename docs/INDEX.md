@@ -4,11 +4,21 @@ Quick navigation for all project documentation.
 
 ---
 
+## 🌐 Live Demo
+
+**Try the app now**: https://stepreadercnn.streamlit.app
+
+No installation required - full functionality available online!
+
+---
+
 ## Getting Started
 
 📄 **[Main README](../README.md)** - Project overview, quick start, installation
+- Live demo link and online access
 - Features, usage, model performance
 - System requirements, dependencies
+- Deployment information
 - Testing instructions
 
 ---
@@ -16,12 +26,26 @@ Quick navigation for all project documentation.
 ## User Documentation
 
 📘 **[User Guide](USER_GUIDE.md)** - Complete user manual (378 lines)
-- Installation & setup
+- Online access (Streamlit Cloud)
+- Local installation & setup
 - Data Explorer usage
 - Model Training walkthrough
 - Model Evaluation & Prediction
 - Synthetic Data Generation
 - Troubleshooting
+
+---
+
+## Deployment Documentation
+
+🚀 **[Deployment Guide](DEPLOYMENT_GUIDE.md)** - Cloud and production deployment
+- **Streamlit Cloud deployment** (recommended) ⭐
+- Local deployment
+- Docker deployment
+- AWS, GCP, Azure, Heroku options
+- Kubernetes deployment
+- TestData configuration
+- Troubleshooting deployment issues
 
 ---
 
@@ -70,9 +94,15 @@ See `../images/` directory for visual evidence:
 ## Quick Links
 
 ### For Users
-1. Start here: [Main README](../README.md)
-2. Detailed usage: [User Guide](USER_GUIDE.md)
-3. Troubleshooting: [User Guide § Troubleshooting](USER_GUIDE.md#troubleshooting)
+1. **Try online**: https://stepreadercnn.streamlit.app
+2. Start here: [Main README](../README.md)
+3. Detailed usage: [User Guide](USER_GUIDE.md)
+4. Troubleshooting: [User Guide § Troubleshooting](USER_GUIDE.md#troubleshooting)
+
+### For Deployers
+1. **Quick deploy**: [Deployment Guide § Streamlit Cloud](DEPLOYMENT_GUIDE.md#streamlit-cloud-deployment)
+2. Fix TestData issues: [Deployment Guide § Troubleshooting](DEPLOYMENT_GUIDE.md#troubleshooting)
+3. Production setup: [Deployment Guide § Production](DEPLOYMENT_GUIDE.md#production-deployment)
 
 ### For Developers
 1. Architecture overview: [Developer Notes § Phase 4](Dev_note.md#phase-4-cnn-model-development)
@@ -80,10 +110,12 @@ See `../images/` directory for visual evidence:
 3. Development history: [Developer Notes](Dev_note.md)
 
 ### For Researchers
-1. Model performance: [Main README § Model Performance](../README.md#model-performance)
-2. Performance benchmarks: [Developer Notes § Phase 9](Dev_note.md#phase-9-testing--final-integration)
-3. Citation format: [Main README § Citation](../README.md#citation)
+1. **Live demo**: https://stepreadercnn.streamlit.app
+2. Model performance: [Main README § Model Performance](../README.md#model-performance)
+3. Performance benchmarks: [Developer Notes § Phase 9](Dev_note.md#phase-9-testing--final-integration)
+4. Citation format: [Main README § Citation](../README.md#citation)
 
 ---
 
-**Last Updated**: October 16, 2025
+**Last Updated**: October 19, 2025
+**Deployment Status**: ✅ Live on Streamlit Cloud
