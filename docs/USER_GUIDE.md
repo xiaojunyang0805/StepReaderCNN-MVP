@@ -142,6 +142,9 @@ The application is fully deployed on Streamlit Cloud with:
 - Validation: 15% (recommended)
 - Test: 15% (recommended)
 
+![Model Training Configuration](./images/model-training-configuration.png)
+*Figure 3.1: Model Training Configuration interface showing architecture selection, hyperparameters, and data split settings*
+
 ### Training Monitor Tab
 
 Real-time visualization during training:
@@ -153,6 +156,9 @@ Real-time visualization during training:
 **Metrics Cards**:
 - Final train/val loss and accuracy
 - Delta from best performance
+
+![Model Training Monitor](./images/model-training-training-monitor.png)
+*Figure 3.2: Real-time Training Monitor displaying loss and accuracy curves with overfitting indicators*
 
 ### Results Tab
 
@@ -177,6 +183,9 @@ Real-time visualization during training:
 2. Click **"Save Model"**
 3. Model saved to `outputs/trained_models/`
 
+![Model Training Results](./images/model-training-results.png)
+*Figure 3.3: Training Results showing test metrics, per-class performance, confusion matrix, and model saving options*
+
 ---
 
 ## Model Evaluation
@@ -190,6 +199,9 @@ Real-time visualization during training:
    - Test accuracy
    - Device (CPU/CUDA)
 3. Click **"Use for Prediction"** to set active model
+
+![Model Selection Interface](./images/evaluation-model-selection.png)
+*Figure 4.1: Model Selection interface displaying available trained models with their performance metrics*
 
 ### Prediction Tab
 
@@ -212,6 +224,9 @@ Real-time visualization during training:
 4. Click **"Predict"**
 5. View prediction results
 
+![Model Prediction Interface](./images/evaluation-prediction.png)
+*Figure 4.2: Prediction interface showing signal visualization, predicted class, confidence scores, and probability distribution*
+
 ### Model Comparison Tab
 
 1. Ensure multiple models are loaded
@@ -221,6 +236,9 @@ Real-time visualization during training:
    - Model name, parameters
    - Test accuracy, Macro F1, Precision, Recall
 5. View performance bar charts (Accuracy and F1-Score)
+
+![Model Comparison Analysis](./images/evaluation-model-comparison.png)
+*Figure 4.3: Model Comparison showing side-by-side performance metrics and visual comparisons across multiple trained models*
 
 ---
 
@@ -246,6 +264,9 @@ Real-time visualization during training:
 **Class Statistics**:
 - View parameters extracted from real data (mean, std, typical length)
 
+![Synthetic Signal Generation](./images/synthetic-data-generate-signals.png)
+*Figure 5.1: Synthetic Signal Generation interface with parameter controls, noise settings, and class statistics*
+
 ### Preview & Analysis Tab
 
 After generating a signal:
@@ -253,6 +274,9 @@ After generating a signal:
 - **Frequency Domain Plot**: FFT analysis (log-log scale)
 - **Signal Statistics**: Length, duration, mean, std
 - **Comparison with Real Data**: Table comparing generated vs real stats
+
+![Signal Preview and Analysis](./images/synthetic-data-preview-analysis.png)
+*Figure 5.2: Preview & Analysis tab showing time-domain signal, frequency spectrum, statistics, and comparison with real data*
 
 ### Batch Generation Tab
 
@@ -270,6 +294,9 @@ After generating a signal:
 2. Configure advanced parameters
 3. Click **"Generate Batch"**
 4. View results summary
+
+![Batch Generation Interface](./images/synthetic-data-batch-generation.png)
+*Figure 5.3: Batch Generation showing dataset balancing mode with current distribution and automatic synthetic sample calculation*
 
 ---
 
