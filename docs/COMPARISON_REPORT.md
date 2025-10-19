@@ -831,6 +831,35 @@ Researchers can use the **reference paper** to understand algorithms, then use *
 ## 14. Citations and References
 
 ### Reference Paper
+
+**Zhao, Z., Naha, A., Kostopoulos, N., & Sekretareva, A.** (2024). Advanced Algorithm for Step Detection in Single-Entity Electrochemistry: A Comparative Study of Wavelet Transforms and Convolutional Neural Networks. *Faraday Discussions*. Royal Society of Chemistry.
+
+- **DOI**: [10.1039/D4FD00130C](https://doi.org/10.1039/D4FD00130C)
+- **Repository**: https://github.com/ziwzh166/SEE_StepAnalysis
+- **Focus**: Comparative methodology research between DWT and CNN for step detection in single-entity electrochemistry
+
+### StepReaderCNN
+
+**Yang, X.** (2025). StepReaderCNN: CNN-based Framework for Electrochemical Sensor Signal Processing (Version 1.0).
+
+- **Repository**: https://github.com/xiaojunyang0805/StepReaderCNN-MVP
+- **Live Demo**: https://stepreadercnn.streamlit.app
+- **Focus**: Production-ready deep learning framework for particle size classification with interactive GUI and cloud deployment
+
+### Shared Reference
+
+**Dick, J. E., Renault, C., & Bard, A. J.** (2015). Electrochemical detection of a single cytomegalovirus at an ultramicroelectrode and its antibody anchoring. *Journal of the American Chemical Society*, 137(26), 8376-8379.
+
+- **DOI**: [10.1021/jacs.5b05186](https://doi.org/10.1021/jacs.5b05186)
+- **Significance**: Foundational work in single-entity electrochemistry that both projects build upon
+
+---
+
+### BibTeX Format (For Academic Citations)
+
+<details>
+<summary>Click to expand BibTeX entries</summary>
+
 ```bibtex
 @article{zhao2024advanced,
   title = {Advanced Algorithm for Step Detection in Single-Entity Electrochemistry:
@@ -841,10 +870,7 @@ Researchers can use the **reference paper** to understand algorithms, then use *
   doi = {10.1039/D4FD00130C},
   publisher = {Royal Society of Chemistry}
 }
-```
 
-### StepReaderCNN
-```bibtex
 @software{stepreader_cnn_2025,
   title = {StepReaderCNN: CNN-based Framework for Electrochemical Sensor Signal Processing},
   author = {Yang, Xiaojun},
@@ -854,10 +880,7 @@ Researchers can use the **reference paper** to understand algorithms, then use *
   url = {https://github.com/xiaojunyang0805/StepReaderCNN-MVP},
   note = {Live demo: https://stepreadercnn.streamlit.app}
 }
-```
 
-### Shared Reference
-```bibtex
 @article{dick2015electrochemical,
   title = {Electrochemical detection of a single cytomegalovirus at an ultramicroelectrode
            and its antibody anchoring},
@@ -865,9 +888,12 @@ Researchers can use the **reference paper** to understand algorithms, then use *
   journal = {Journal of the American Chemical Society},
   year = {2015},
   volume = {137},
-  pages = {8376--8379}
+  pages = {8376--8379},
+  doi = {10.1021/jacs.5b05186}
 }
 ```
+
+</details>
 
 ---
 
