@@ -202,7 +202,7 @@ class DataViewer:
                     st.rerun()
 
             with nav_col2:
-                st.markdown(f"<div style='text-align: center; padding: 8px; background-color: rgba(128, 128, 128, 0.1); border-radius: 5px;'><b>Sample {st.session_state.signal_viewer_sample_idx} / {num_samples - 1}</b></div>", unsafe_allow_html=True)
+                st.markdown(f"<div style='text-align: center; padding: 8px; background-color: rgba(128, 128, 128, 0.1); border-radius: 5px;'><b>Sample {st.session_state.signal_viewer_sample_idx + 1} / {num_samples}</b></div>", unsafe_allow_html=True)
 
             with nav_col3:
                 if st.button("Next ▶", use_container_width=True, disabled=(st.session_state.signal_viewer_sample_idx == num_samples - 1)):
@@ -234,12 +234,16 @@ class DataViewer:
 
             if compare_mode:
                 num_compare = st.slider("Number of Samples", 2, min(5, num_samples), 2)
-                compare_indices = st.multiselect(
+                # Create 1-based display options but map to 0-based indices
+                sample_options = {f"Sample {i+1}": i for i in range(num_samples)}
+                selected_display = st.multiselect(
                     "Select Samples to Compare",
-                    range(num_samples),
-                    default=list(range(min(num_compare, num_samples))),
+                    options=list(sample_options.keys()),
+                    default=[f"Sample {i+1}" for i in range(min(num_compare, num_samples))],
                     max_selections=5
                 )
+                # Convert back to 0-based indices
+                compare_indices = [sample_options[s] for s in selected_display]
 
         with viz_col:
             if not compare_mode:
@@ -312,15 +316,15 @@ class DataViewer:
             x=time_data,
             y=current_data,
             mode='lines+markers' if show_markers else 'lines',
-            name=f"{class_label} - Sample {sample_idx}",
+            name=f"{class_label} - Sample {sample_idx + 1}",
             line=dict(width=1.5),
             marker=dict(size=3) if show_markers else None
         ))
 
         fig.update_layout(
-            title=f"Signal: {class_label} - Sample {sample_idx}",
+            title=f"Signal: {class_label} - Sample {sample_idx + 1}",
             xaxis_title="Time (ms)",
-            yaxis_title="Current (A)",
+            yaxis_title="Current (nA)",
             height=500,
             hovermode='x unified',
             showlegend=True,
@@ -352,7 +356,7 @@ class DataViewer:
                 x=time_data,
                 y=current_data,
                 mode='lines+markers' if show_markers else 'lines',
-                name=f"Sample {sample_idx}",
+                name=f"Sample {sample_idx + 1}",
                 line=dict(width=1.5, color=colors[idx % len(colors)]),
                 marker=dict(size=3) if show_markers else None
             ))
@@ -360,7 +364,7 @@ class DataViewer:
         fig.update_layout(
             title=f"Signal Comparison: {class_label}",
             xaxis_title="Time (ms)",
-            yaxis_title="Current (A)",
+            yaxis_title="Current (nA)",
             height=500,
             hovermode='x unified',
             showlegend=True,
