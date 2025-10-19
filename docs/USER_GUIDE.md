@@ -78,6 +78,9 @@ The application is fully deployed on Streamlit Cloud with:
 3. Supported format: Two columns (`Time (ms)`, `Current (Channel 1)`)
 4. Files are automatically labeled based on filename (e.g., "PS 1um 01.csv" → label "1um")
 
+![Data Import Interface](./images/data-explorer-upload.png)
+*Figure 2.1: Data Import interface showing upload options and TestData loading*
+
 ### Exploring Data
 
 **Dataset Overview**:
@@ -85,6 +88,9 @@ The application is fully deployed on Streamlit Cloud with:
 - Class distribution bar chart and pie chart
 - Detailed statistics table by class
 - Signal length distribution box plots
+
+![Dataset Overview](./images/data-explorer-overview.png)
+*Figure 2.2: Dataset Overview showing class distribution, statistics, and signal length analysis*
 
 **Signal Viewer**:
 - **Select Class**: Choose particle size (1um, 2um, 3um)
@@ -94,6 +100,9 @@ The application is fully deployed on Streamlit Cloud with:
   - Show/hide markers
   - Downsample for faster rendering
 - **Compare Mode**: View multiple samples simultaneously (up to 5)
+
+![Interactive Signal Viewer](./images/data-explorer-signal-viewer.png)
+*Figure 2.3: Interactive Signal Viewer with navigation controls and display options*
 
 **Signal Statistics**:
 - Length and duration
