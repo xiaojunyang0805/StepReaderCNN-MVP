@@ -1,26 +1,14 @@
 """
-StepReaderCNN - Root Application Launcher
-This file serves as the entry point for Streamlit deployment,
-redirecting to the actual application in the MNP_sizer_CNN subfolder.
+StepReaderCNN - Streamlit GUI Application
+Main entry point for the web-based GUI interface.
 """
 
+import streamlit as st
 import sys
 from pathlib import Path
 
-# Add the MNP_sizer_CNN directory to Python path
-project_dir = Path(__file__).parent / "MNP_sizer_CNN"
-sys.path.insert(0, str(project_dir))
-
-# Change working directory to MNP_sizer_CNN so relative paths work
-import os
-os.chdir(str(project_dir))
-
-# Import and run the actual app
-import streamlit as st
-from pathlib import Path
-
 # Add src directory to Python path
-src_path = Path("src")
+src_path = Path(__file__).parent / "src"
 sys.path.insert(0, str(src_path))
 
 # Import GUI components

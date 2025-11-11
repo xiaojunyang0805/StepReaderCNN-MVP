@@ -1,0 +1,17 @@
+torch
+torchvision
+numpy
+pandas
+scipy
+h5py
+matplotlib
+seaborn
+plotly
+streamlit
+fastapi
+uvicorn
+scikit-learn
+tensorboard
+tqdm
+pyyaml
+python-dotenv
